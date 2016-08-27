@@ -1,13 +1,11 @@
 require_relative 'formats/csv'
-require_relative 'formats/pdf'
-module Handler
-  include Pdf
+
+
+class Handler
   include CommaSeparatedValues
   def send_format(selected_format)
     if selected_format =='csv'
-      csv_exporter(selected_format)
-    elsif selected_format =='pdf'
-      pdf_exporter
+      to_csv
     else
       puts "selected format not available"
     end  

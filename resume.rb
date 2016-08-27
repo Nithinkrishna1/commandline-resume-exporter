@@ -10,13 +10,12 @@ class Resume
       $values.push(gets.chomp) 
     end
   end
-  include Formats
-  include Handler
+  
   def checks_export_availability
-    puts available_formats
+    puts Formats.new.available_formats
     puts "select the format to export"
     selected_format = gets.chomp
-    send_format(selected_format)
+    Handler.new.send_format(selected_format)
   end
 end
 

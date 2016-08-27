@@ -1,9 +1,10 @@
 require 'csv'
 module CommaSeparatedValues
-def csv_exporter(selected_format)
+def to_csv
   CSV.open("resume.csv", "w") do |csv|
     csv << $content
     csv << $values
   end
+  puts "generated resume.csv"
 end
 end
