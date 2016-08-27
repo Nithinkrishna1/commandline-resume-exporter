@@ -1,0 +1,5 @@
+require 'csv'
+def csv_exporter
+  CSV.open("resume.csv", "w") do |csv|
+    csv << #array
+end

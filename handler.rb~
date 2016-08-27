@@ -1,0 +1,12 @@
+module Handler
+  include CSV
+  def send_format(selected_format,$content,$values)
+    if selected_format =='csv'
+      csv_exporter
+    elsif selected_format =='pdf'
+      #call pdf
+    else
+      puts "selected format not available"
+    end  
+  end
+end
