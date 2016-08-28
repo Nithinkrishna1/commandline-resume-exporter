@@ -5,10 +5,10 @@ class CSVexporter
     @values=values
   end
   def write
-  CSV.open("resume.csv", "w") do |csv|
+    CSV.open("resume.csv", "w") do |csv|
     csv << @content
     csv << @values 
-  end
+    end
   puts "generated resume.csv"
-end
+  end
 end
