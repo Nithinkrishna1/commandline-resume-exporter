@@ -1,6 +1,0 @@
-Module 
-def available_formats
-  available_formats = Dir.glob("formats/*.rb")
-  
-end
-end
