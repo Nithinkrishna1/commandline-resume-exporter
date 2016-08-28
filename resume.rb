@@ -2,7 +2,7 @@ require_relative 'formats'
 require_relative 'exporter'
 
 class Resume
-  def user_details
+  def user_details 
     content = ["name","age","total_cgpa"]
     values =[]
     content.each do |item|

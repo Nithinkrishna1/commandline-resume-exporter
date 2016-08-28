@@ -7,4 +7,3 @@ class Exporter
      Object.const_get("#{selected_format.upcase}exporter").new(content,values).write
  end
 end
- 

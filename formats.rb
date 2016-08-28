@@ -3,4 +3,4 @@ class Formats
     formats = Dir.glob("formats/*.rb")
   end
 
-end
+end 
