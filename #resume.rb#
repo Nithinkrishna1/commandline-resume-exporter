@@ -15,8 +15,8 @@ class Resume
     puts Formats.new.available_formats
     puts "select the format to export"
     selected_format = gets.chomp
-    var= Handler.new.send_format(selected_format)
-    puts var
+    Handler.new.send_format(selected_format)
+    
   end
 end
 

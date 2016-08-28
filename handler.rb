@@ -1,13 +1,11 @@
-require_relative 'formats/csv'
+require 'require_all'
+require_all 'formats'
 
 
 class Handler
-  include CommaSeparatedValues
   def send_format(selected_format)
-    if selected_format =='csv'
-      to_csv
-    else
-      puts "selected format not available"
-    end  
-  end
+    begin
+      Object.const_get("To_#{selected_format}").new.exporter
+    end
+ end
 end

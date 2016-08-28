@@ -1,6 +1,6 @@
 require 'csv'
-module CommaSeparatedValues
-def to_csv
+class To_csv
+def exporter
   CSV.open("resume.csv", "w") do |csv|
     csv << $content
     csv << $values
